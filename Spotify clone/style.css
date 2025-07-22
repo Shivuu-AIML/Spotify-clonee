@@ -1,0 +1,286 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Layout Containers */
+.main {
+  display: flex;
+  height: 100vh;
+  padding: 0.5rem;
+}
+
+.sidebar {
+  background-color: #000;
+  width: 300px;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #121212;
+  border-radius: 1rem;
+  margin-left: 0.5rem;
+  padding: 1rem 1.5rem;
+  overflow-y: auto;
+  height: calc(100vh - 90px); /* space for music player */
+}
+
+/* Navigation */
+.nav {
+  background-color: #121212;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.nav-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  line-height: 2.5rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.nav-option:hover {
+  opacity: 1;
+}
+
+.nav-option i {
+  font-size: 1.25rem;
+}
+
+.nav-option a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Library */
+.library {
+  background-color: #121212;
+  border-radius: 1rem;
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.lib-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.left img {
+  height: 20px;
+  width: 20px;
+}
+
+.right i {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+/* Playlist / Podcast Boxes */
+.box {
+  background-color: #232323;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.box-p1 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.box-p2 {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+/* Sticky Nav */
+.sticky-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: #121212;
+  z-index: 10;
+}
+
+.sticky-nav-icons img {
+  height: 24px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.sticky-nav-options {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Cards */
+.cards {
+  margin-top: 1rem;
+}
+
+.cards h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+
+  .cards-container {
+  display: flex;
+  gap: 10px;
+  
+  margin-bottom: 30px;
+}
+
+
+
+.card {
+  background-color: #181818;
+  width: 180px;
+  min-height: 240px;
+  border-radius: 8px;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background-color: #282828;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-info {
+  font-size: 0.8rem;
+  color: #b3b3b3;
+}
+
+/* Music Player */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #181818;
+  border-top: 1px solid #282828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  color: white;
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #181818;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.player-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.player-album {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+.song-info {
+  display: flex;
+  flex-direction: column;
+}
+.song-title {
+  font-weight: bold;
+}
+.song-artist {
+  font-size: 0.8rem;
+  color: #b3b3b3;
+}
+.player-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.controls img {
+  height: 20px;
+  margin: 0 8px;
+  cursor: pointer;
+}
+.play-btn {
+  height: 30px;
+}
+.progress-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.progress-bar input[type="range"] {
+  width: 300px;
+}
+.player-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.player-right input[type="range"] {
+  width: 100px;
+}

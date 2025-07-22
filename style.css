@@ -284,3 +284,80 @@ body {
 .player-right input[type="range"] {
   width: 100px;
 }
+
+
+
+
+/* --------- Mobile Responsive Styles --------- */
+@media (max-width: 768px) {
+
+  .main {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    height: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+
+  .library {
+    display: none; /* Hide library for cleaner mobile look */
+  }
+
+  .main-content {
+    margin-left: 0;
+    height: calc(100vh - 90px - 120px); /* account for sidebar */
+    padding: 1rem;
+  }
+
+  .sticky-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .sticky-nav-icons {
+    margin-bottom: 0.5rem;
+  }
+
+  .cards-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 45%;
+    margin-bottom: 1rem;
+  }
+
+  .player {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    height: auto;
+  }
+
+  .player-left, .player-center, .player-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .player-center {
+    align-items: flex-start;
+  }
+
+  .progress-bar input[type="range"] {
+    width: 100%;
+  }
+
+  .player-right input[type="range"] {
+    width: 100px;
+  }
+}
